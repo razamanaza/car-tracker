@@ -6,14 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npx eslint src test",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src test --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
-    "eslint": "8.34.0",
     "eslint-config-next": "13.2.1",
     "next": "13.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.4"
   }
 }
