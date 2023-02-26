@@ -13,11 +13,17 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/lab": "^5.0.0-alpha.120",
+    "@mui/material": "^5.11.10",
     "cheerio": "^1.0.0-rc.12",
     "eslint-config-next": "13.2.1",
     "next": "13.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-filterable-table": "^0.3.442"
   },
   "devDependencies": {
     "eslint": "^8.34.0",
