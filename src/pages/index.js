@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Container from '@mui/material/Container';
-import LoadingButton from '@mui/lab/LoadingButton';
+import CarsTable from '@/components/CarsTable';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Container maxWidth="xl" fixed={true} className={styles.container}>
-          <LoadingButton loading={true} />
+          <CarsTable />
         </Container>
       </main>
     </>
