@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
 import CarsTable from '@/components/CarsTable';
 
 export default function Home() {
@@ -11,8 +10,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main>
         <div className="container p-6 grid place-content-center min-h-screen bg-white">
+          <h1 className="text-xl text-red-800 font-semibold mb-4">
+            Cars from traders in Dunedin
+          </h1>
           <CarsTable />
         </div>
       </main>
