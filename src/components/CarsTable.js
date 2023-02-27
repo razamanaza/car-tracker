@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
-import LoadingButton from '@mui/lab/LoadingButton';
-import Alert from '@mui/material/Alert';
+import Spinner from '@/components/Spinner';
 import useSWR from 'swr';
 import {
   createColumnHelper,
@@ -209,8 +208,16 @@ const columns = [
 export default function CarsTable() {
   // const { data, error, isLoading } = useSWR('/api/cars', fetcher);
 
-  // if (error) return <Alert severity="error">Error fetching cars API!</Alert>;
-  // if (isLoading) return <LoadingButton loading={true} />;
+  // if (error)
+  //   return (
+  //     <div
+  //       class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  //       role="alert"
+  //     >
+  //       <span class="font-medium">Failed to fetch API!</span>
+  //     </div>
+  //   );
+  // if (isLoading) return <Spinner />;
 
   const table = useReactTable({
     data,

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import Container from '@mui/material/Container';
 import CarsTable from '@/components/CarsTable';
 
 export default function Home() {
@@ -13,9 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Container maxWidth="xl" fixed={true} className={styles.container}>
+        <div className="container p-6 grid place-content-center min-h-screen bg-white">
           <CarsTable />
-        </Container>
+        </div>
       </main>
     </>
   );
