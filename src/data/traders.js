@@ -13,7 +13,9 @@ export default [
       const data = [];
       const vehicles = $('.vehicle');
       vehicles.each((idx, el) => {
-        const link = $(el).find('.vehicle-info div:first a').attr('href');
+        const link = `https://www.truevaluecars.co.nz${$(el)
+          .find('.vehicle-info div:first a')
+          .attr('href')}`;
         const name = $(el)
           .find('.vehicle-info div:first h6')
           .text()
