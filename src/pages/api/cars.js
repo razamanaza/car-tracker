@@ -17,7 +17,7 @@ export default async function fetchTrueValue(req, res) {
     const dateDiff = Date.now() - lastChangeDate;
 
     let data = {};
-    if (dateDiff > 86400) {
+    if (dateDiff > 86400 || req.query?.force) {
       const promises = traders.map(async (trader) => {
         const remote = await fetch(trader.scrapeLink);
         const html = await remote.text();
