@@ -1,10 +1,10 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import Spinner from '@/components/Spinner';
 import useSWR from 'swr';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function CarsTable() {
+export default function CarsTable({ priceLimit }) {
   const { data, error, isLoading } = useSWR('/api/cars', fetcher);
 
   if (error)
@@ -18,32 +18,49 @@ export default function CarsTable() {
     );
   if (isLoading) return <Spinner />;
 
-  const displayData = data.data;
+  const displayData = data.data.filter((carData) =>
+    priceLimit ? Number(carData.price) <= priceLimit : true
+  );
   console.log(displayData);
 
   return (
-    <table>
-      <thead>
+    <table className="w-full min-w-[800px] text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Year</th>
-          <th>Mileage</th>
+          <th scope="col" className="px-6 py-3">
+            Name
+          </th>
+          <th scope="col" className="px-6 py-3">
+            Price
+          </th>
+          <th scope="col" className="px-6 py-3">
+            Year
+          </th>
+          <th scope="col" className="px-6 py-3">
+            Mileage
+          </th>
         </tr>
       </thead>
       <tbody>
         {displayData.map((row) => (
-          <tr key={row.link}>
-            <td>
-              <a href={row.link} target="_blank">
+          <tr
+            key={row.link}
+            className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+          >
+            <td className="px-6 py-4">
+              <a
+                href={row.link}
+                target="_blank"
+                className="text-blue-600 dark:text-blue-500 hover:underline"
+              >
                 {row.name}
               </a>
               <br />
               {row.description}
             </td>
-            <td>{row.price}</td>
-            <td>{row.year}</td>
-            <td>{row.mileage}</td>
+            <td className="px-6 py-4">{row.price}</td>
+            <td className="px-6 py-4">{row.year}</td>
+            <td className="px-6 py-4">{row.mileage}</td>
           </tr>
         ))}
       </tbody>

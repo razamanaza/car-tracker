@@ -4,7 +4,7 @@ import path from 'path';
 
 export default async function fetchTrueValue(req, res) {
   try {
-    const cacheDir = path.join(__dirname, 'cache');
+    const cacheDir = path.join(process.cwd(), 'cache');
     const cacheFile = path.join(cacheDir, 'data.json');
     await fs.mkdir(cacheDir, { recursive: true });
     let lastChangeDate = 0;
@@ -12,12 +12,12 @@ export default async function fetchTrueValue(req, res) {
       const { mtime } = await fs.stat(cacheFile);
       lastChangeDate = mtime;
     } catch {
-      console.log('No file');
+      console.log('No cache file');
     }
     const dateDiff = Date.now() - lastChangeDate;
 
     let data = {};
-    if (dateDiff > 86400 || req.query?.force) {
+    if (dateDiff > 86400000 || req.query?.force) {
       const promises = traders.map(async (trader) => {
         const remote = await fetch(trader.scrapeLink);
         const html = await remote.text();
@@ -26,6 +26,7 @@ export default async function fetchTrueValue(req, res) {
       });
       data = (await Promise.all(promises)).flat();
       await fs.writeFile(cacheFile, JSON.stringify(data));
+      console.log(dateDiff);
       console.log('Read from internet');
     } else {
       const text = await fs.readFile(cacheFile);
