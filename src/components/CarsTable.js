@@ -34,10 +34,10 @@ export default function CarsTable({ priceLimit }) {
             Price
           </th>
           <th scope="col" className="px-6 py-3">
-            Year
+            Mileage
           </th>
           <th scope="col" className="px-6 py-3">
-            Mileage
+            Year
           </th>
         </tr>
       </thead>
@@ -59,8 +59,8 @@ export default function CarsTable({ priceLimit }) {
               {row.description}
             </td>
             <td className="px-6 py-4">{row.price}</td>
-            <td className="px-6 py-4">{row.year}</td>
             <td className="px-6 py-4">{row.mileage}</td>
+            <td className="px-6 py-4">{row.year}</td>
           </tr>
         ))}
       </tbody>

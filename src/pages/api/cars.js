@@ -1,6 +1,7 @@
 import traders from '@/data/traders';
 import fs from 'fs/promises';
 import path from 'path';
+import * as cheerio from 'cheerio';
 
 export default async function fetchTrueValue(req, res) {
   try {
@@ -21,7 +22,7 @@ export default async function fetchTrueValue(req, res) {
       const promises = traders.map(async (trader) => {
         const remote = await fetch(trader.scrapeLink);
         const html = await remote.text();
-        const vehicle = trader.getVehicleData(html);
+        const vehicle = trader.getVehicleData(html, cheerio);
         return vehicle;
       });
       data = (await Promise.all(promises)).flat();
