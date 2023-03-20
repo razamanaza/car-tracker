@@ -1,4 +1,5 @@
 import traders from '@/data/traders';
+import * as siteEngines from '@/data/siteEngines';
 import fs from 'fs/promises';
 import path from 'path';
 import * as cheerio from 'cheerio';
@@ -22,7 +23,8 @@ export default async function fetchTrueValue(req, res) {
       const promises = traders.map(async (trader) => {
         const remote = await fetch(trader.scrapeLink);
         const html = await remote.text();
-        const vehicle = trader.getVehicleData(html, cheerio);
+        const engine = siteEngines[trader.siteEngine];
+        const vehicle = engine(html, cheerio, trader.baseUrl);
         return vehicle;
       });
       data = (await Promise.all(promises)).flat();
