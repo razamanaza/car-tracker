@@ -7,24 +7,24 @@ export default async function (scrapeLink) {
   const html = await remote.text();
   const $ = cheerio.load(html);
   const data = [];
-  const vehicles = $('.vehicle');
+  const vehicles = $('.featured_box');
   vehicles.each((idx, el) => {
     const link = `${remoteUrl.origin}${$(el)
-      .find('.vehicle-info div:first a')
+      .find('.features_content a:first')
       .attr('href')}`;
     const name = $(el)
-      .find('.vehicle-info div:first h6')
+      .find('.features_content h2')
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ');
     const price = $(el)
-      .find('.price-wrapper .amount')
+      .find('price_box')
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ')
       .replaceAll(/\D+/g, '');
     const description = $(el)
-      .find('.vehicle-specs')
+      .find('features_content ul')
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ');

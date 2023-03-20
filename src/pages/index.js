@@ -3,7 +3,7 @@ import Head from 'next/head';
 import CarsTable from '@/components/CarsTable';
 
 export default function Home() {
-  const [priceLimit, setPriceLimit] = useState(null);
+  const [priceLimit, setPriceLimit] = useState(10000);
 
   return (
     <>

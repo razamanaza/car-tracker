@@ -21,11 +21,9 @@ export default async function fetchTrueValue(req, res) {
     let data = {};
     if (dateDiff > 86400000 || req.query?.force) {
       const promises = traders.map(async (trader) => {
-        const remote = await fetch(trader.scrapeLink);
-        const html = await remote.text();
         const engine = siteEngines[trader.siteEngine];
-        const vehicle = engine(html, cheerio, trader.baseUrl);
-        return vehicle;
+        const vehicle = await engine(trader.scrapeLink);
+        return vehicle.map((item) => ({ ...item, trader: trader.name }));
       });
       data = (await Promise.all(promises)).flat();
       await fs.writeFile(cacheFile, JSON.stringify(data));

@@ -10,15 +10,15 @@ export default async function (scrapeLink) {
   const vehicles = $('.vehicle');
   vehicles.each((idx, el) => {
     const link = `${remoteUrl.origin}${$(el)
-      .find('.vehicle-info div:first a')
+      .find('.cell-photo a')
       .attr('href')}`;
     const name = $(el)
-      .find('.vehicle-info div:first h6')
+      .find('.vehicle-info a:first h6')
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ');
     const price = $(el)
-      .find('.price-wrapper .amount')
+      .find('.price-wrapper .price')
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ')

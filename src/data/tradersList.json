@@ -1,90 +1,22 @@
 [
   {
-    "id": "",
-    "url": ""
-  },
-  {
-    "id": "jonesMotoring",
-    "url": "https://www.jonesmotoring.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&IgnoreContext=&FuelType1=&Colour="
-  },
-  {
-    "id": "scottsAutoSales",
-    "url": "https://www.scottsautosales.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
-  },
-  {
-    "id": "yourNextCarDunedin",
-    "url": "https://www.yncd.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
-  },
-  {
-    "id": "valleyMotorCourt",
-    "url": "https://www.valleymotorcourt.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
-  },
-  {
-    "id": "brianScottMotors",
-    "url": "https://www.brianscottmotors.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&FuelType1="
-  },
-  {
+    "comment": "Problems loading initial page",
     "id": "lloydWilsonMotors",
     "url": "https://lloydwilsonmotors.co.nz/cars/"
   },
   {
-    "id": "stroudMotors",
-    "url": "https://www.stroudmotors.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&IgnoreContext=&FuelType1=&Colour="
-  },
-  {
-    "id": "robMcLellanMotors",
-    "url": "http://www.robmclellanmotors.co.nz/search/cars?ut=&r=14&d=67&np=&xp=&ny=&xy=&no=&xo=&q="
-  },
-  {
-    "id": "mitchellMotorCourt",
-    "url": "https://www.mitchellmotorcourt.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
-  },
-  {
-    "id": "hvsMotorsDunedin",
-    "url": "https://www.hvsmotors.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&IgnoreContext=&FuelType1=&Colour=&loc=dunedin"
-  },
-  {
-    "id": "marcsCars",
-    "url": "https://www.marcscars.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=Automatic&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&IgnoreContext=&FuelType1=&Colour="
-  },
-  {
+    "comment": "Problems loading initial page",
     "id": "autonestCars",
     "url": "http://www.autonest.co.nz/vehicles"
   },
   {
+    "comment": "Problems loading initial page",
     "id": "budgetCarz",
     "url": "http://www.budgetcarz.co.nz/vehicles?keyword=&pricefrom=&priceto=&yearfrom=&yearto=&startfrom=&endto=&ccfrom=&ccto=&gear_type%5B%5D=Automatic"
   },
   {
-    "id": "autoCourt",
-    "url": "https://www.autocourt.net.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&FuelType1="
-  },
-  {
-    "id": "georgeCarsDunedin",
-    "url": "https://www.georgecars.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model=&VehicleType=All&FuelType1="
-  },
-  {
-    "id": "portageCars",
-    "url": "https://portagecars.co.nz/listing/?keyword=&bodyType=0&make=0&model=0&engineSizeMin=0&engineSizeMax=9000&transmission=0&fuelType=0&dealerShip=Portage+Cars+Dunedin&PriceMin=0&PriceMax=499999&sortType=1"
-  },
-  {
-    "id": "taylormadeMotors",
-    "url": "https://www.taylormademotors.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
-  },
-  {
+    "comment": "Needs ajustments",
     "id": "gilmourMotorsSuzuki",
     "url": "https://www.gilmourmotors.co.nz/used-cars/?sort=4"
-  },
-  {
-    "id": "autoGo",
-    "url": "https://www.autogo.co.nz/used-cars-for-sale/sort-by-price-asc?shopid=13119"
-  },
-  {
-    "id": "top1Motors",
-    "url": "https://www.top1motors.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
-  },
-  {
-    "id": "carbaseCarmart",
-    "url": "https://www.carbase.co.nz/vehicles?Make=&Text=&PriceFrom=0&PriceTo=0&YearFrom=0&YearTo=0&Transmission=&BodyStyle=&Dealership=&SortOption=200&Page=1&EngineSizeFrom=0&EngineSizeTo=0&OdometerFrom=0&OdometerTo=0&Model="
   }
 ]
