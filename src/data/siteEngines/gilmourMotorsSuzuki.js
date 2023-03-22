@@ -20,7 +20,7 @@ export default async function (scrapeLink) {
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ')
-      .replaceAll(/\D+/g, '');
+      .replaceAll(/[$\.\,]+/g, '');
     const description = $(el)
       .find('.desc *:not(h1)')
       .text()
@@ -33,14 +33,16 @@ export default async function (scrapeLink) {
       .trim()
       .match(/\d+,\d+km./gi)?.[0]
       .replaceAll(/\D/g, '');
-    data.push({
-      link,
-      name,
-      description,
-      price,
-      year,
-      mileage,
-    });
+    if (price !== 'POA') {
+      data.push({
+        link,
+        name,
+        description,
+        price,
+        year,
+        mileage,
+      });
+    }
   });
   return data;
 }

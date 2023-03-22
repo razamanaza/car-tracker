@@ -8,7 +8,6 @@ export default async function (scrapeLink) {
   const $ = cheerio.load(html);
   const data = [];
   const vehicles = $('.product-card');
-  console.log(vehicles);
   vehicles.each((idx, el) => {
     const link = `${remoteUrl.origin}${$(el).attr('href')}`;
     const name = $(el)
@@ -22,7 +21,7 @@ export default async function (scrapeLink) {
       .trim()
       .replaceAll('.00', '')
       .replaceAll(whiteSpacesRegex, ' ')
-      .replaceAll(/\D+/g, '');
+      .replaceAll(/[$\.\,]+/g, '');
     const description = $(el)
       .find('ul')
       .text()
@@ -30,14 +29,16 @@ export default async function (scrapeLink) {
       .replaceAll(whiteSpacesRegex, ' ');
     const year = name.slice(0, 4);
     const mileage = description.match(/\d+ km/gi)[0].replaceAll(/\D/g, '');
-    data.push({
-      link,
-      name,
-      description,
-      price,
-      year,
-      mileage,
-    });
+    if (price !== 'POA') {
+      data.push({
+        link,
+        name,
+        description,
+        price,
+        year,
+        mileage,
+      });
+    }
   });
   return data;
 }

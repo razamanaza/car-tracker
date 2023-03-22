@@ -22,7 +22,7 @@ export default async function (scrapeLink) {
       .text()
       .trim()
       .replaceAll(whiteSpacesRegex, ' ')
-      .replaceAll(/\D+/g, '');
+      .replaceAll(/[$\.\,]+/g, '');
     const description = $(el)
       .find('.vehicle-specs')
       .text()
@@ -30,14 +30,16 @@ export default async function (scrapeLink) {
       .replaceAll(whiteSpacesRegex, ' ');
     const year = name.slice(0, 4);
     const mileage = description.match(/\d+,\d+km/gi)[0].replaceAll(/\D/g, '');
-    data.push({
-      link,
-      name,
-      description,
-      price,
-      year,
-      mileage,
-    });
+    if (price !== 'POA') {
+      data.push({
+        link,
+        name,
+        description,
+        price,
+        year,
+        mileage,
+      });
+    }
   });
   return data;
 }
