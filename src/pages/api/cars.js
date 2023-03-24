@@ -6,7 +6,7 @@ import * as cheerio from 'cheerio';
 
 export default async function fetchTrueValue(req, res) {
   try {
-    const cacheDir = path.join(process.cwd(), 'cache');
+    const cacheDir = path.join(__dirname, 'cache');
     const cacheFile = path.join(cacheDir, 'data.json');
     await fs.mkdir(cacheDir, { recursive: true });
     let lastChangeDate = 0;
